@@ -32,8 +32,8 @@ set mousehide
 
 
 "Tabweite
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 "set expandtab
 
 "Einrückung  
@@ -79,7 +79,7 @@ set hidden
 
 if has('gui_running')
 	colorscheme solarized
-    set background=light
+    set background=dark  "light
 endif
 
 set guifont=Monospace\ 9
