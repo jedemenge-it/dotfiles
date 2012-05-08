@@ -32,9 +32,8 @@ set mousehide
 
 
 "Tabweite
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
 "set expandtab
 
 "Einrückung  
@@ -92,12 +91,6 @@ imap jj <esc>
 
 "Schnelleres Aufrufen meines vimrc Files
 map <silent><F8> :tabnew ~/.vimrc <CR>
-
-
-"Umschalten des NERDTrees
-map <silent><F7> :NERDTreeToggle <CR>
-"Show hidden files in NerdTree  
-let NERDTreeShowHidden=1
 
 
 " Rechtschreibkorrekturen / Shortcuts
