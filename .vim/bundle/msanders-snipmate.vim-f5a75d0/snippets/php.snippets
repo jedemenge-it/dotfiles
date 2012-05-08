@@ -214,3 +214,21 @@ snippet fun
 # $... = array (...)
 snippet array
 	$${1:arrayName} = array('${2}' => ${3});${4}
+snippet print
+	echo '<pre>';
+		print_r(${1});
+	echo '</pre>';
+	${2}
+snippet func
+	/**
+		@brief    ${1}
+		@param    ${2}
+		@return   ${3}
+		@version
+		  - `strftime("%d.%m.%Y")` / menge / angelegt
+	*/
+	${5:protected} function ${6:funcname}(${7}) {
+		${8}
+	}${9}
+snippet <<
+	<?= ${1} ?>
