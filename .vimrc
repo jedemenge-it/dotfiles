@@ -7,6 +7,9 @@ filetype indent on
 syntax on
 
 
+let g:html_indent_inctags = ""
+
+
 set nocompatible
 set enc=utf-8
 set ruler
@@ -29,8 +32,9 @@ set mousehide
 
 
 "Tabweite
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 "set expandtab
 
 "Einrückung  
@@ -39,7 +43,7 @@ set autoindent
 
 
 "Blendet die Toolbar aus
-"set go-=T  
+set go-=T  
 
 
 "Ändert den Zen Coding expand Befehl zu Ctrl+e
@@ -73,7 +77,15 @@ set hidden
 "hi Comment gui=NONE
 "hi StatusLine gui=underline
 "hi StatusLineNC gui=underline
-"set guifont=Monospace\ 9
+
+colorscheme solarized
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+
+set guifont=Monospace\ 9
 
 
 "Schnelleres umschalten in den select Modus
@@ -102,7 +114,6 @@ set completeopt=longest,menuone
 "SVN Mappings
 nnoremap <F6> :call SvnCommitAll() <CR>
 nnoremap <F5> :call SvnCommit() <CR>
-nnoremap <F4> silent !svn update <CR>
 "svn functionen
 func! SvnCommitAll()
   exec "wa"
