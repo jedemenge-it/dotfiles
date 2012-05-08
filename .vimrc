@@ -78,11 +78,9 @@ set hidden
 "hi StatusLine gui=underline
 "hi StatusLineNC gui=underline
 
-colorscheme solarized
 if has('gui_running')
+	colorscheme solarized
     set background=light
-else
-    set background=dark
 endif
 
 set guifont=Monospace\ 9
