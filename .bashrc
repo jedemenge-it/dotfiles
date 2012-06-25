@@ -1,3 +1,7 @@
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -5,6 +9,8 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 #kürzt verzeichnisse ab
@@ -15,9 +21,14 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_profile ]; then
+	. ~/.bash_profile
+fi
+
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 	. /etc/bash_completion
 fi
 
-export PS1='\u:\w
-\$ '
+
+PS1='___________________________________________________________________________________\n\u on \[\e[33m\]\w\[\e[0m\]\n => '
+PS2='  > '
