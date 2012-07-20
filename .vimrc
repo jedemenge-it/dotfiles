@@ -16,6 +16,7 @@ set ruler
 set showcmd
 set number
 set foldenable
+set nowrap
 
 set directory=~/.vim/tmp/
 
@@ -79,7 +80,7 @@ set hidden
 
 if has('gui_running')
 	colorscheme solarized
-    set background=dark  "light
+    set background=dark 
 endif
 
 set guifont=Monospace\ 9
@@ -96,6 +97,8 @@ map <silent><F8> :tabnew ~/.vimrc <CR>
 " Rechtschreibkorrekturen / Shortcuts
 iab teh the
 iab todo //TODO:
+iab extend extends
+iab << <%= %>
 
 
 " Completezeug
