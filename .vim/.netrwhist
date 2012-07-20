@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/menge/Dropbox/jedeMenge IT/Projekte/zoomoringer/source/vendor/plugins'
-let g:netrw_dirhist_2='/home/menge/Dropbox/jedeMenge IT/Projekte/zoomoringer/source/lib'
-let g:netrw_dirhist_3='/home/menge/uawt'
-let g:netrw_dirhist_4='/home/menge/backup_dotfiles'
