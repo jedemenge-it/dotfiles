@@ -1,6 +1,15 @@
-snippet imgtag
+snippet image
 	<%= image_tag '${1}', :title => '${2}' %>
 snippet <<
 	<%= ${1} %>
 snippet <
 	<% ${1} %>
+snippet media
+	<div class="media">
+		<div class="${1:right}">
+			<%= image_tag '${2}' %>
+		</div>
+		<div class="text">
+		${3}
+		</div>
+	</div>
