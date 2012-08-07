@@ -119,10 +119,6 @@ func! SvnCommit()
 endfunc
 
 
-command COMAls exec "source ~/.coma_session.vim"
-command COMAmks exec "mks! ~/.coma_session.vim"
-
-
 " Tabwechsel rückwärts auf gr gemapped
 map gr gT
 
