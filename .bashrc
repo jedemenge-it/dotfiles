@@ -21,8 +21,9 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
-if [ -f ~/.bash_profile ]; then
-	. ~/.bash_profile
+if [ -d ~/.rbenv ]; then
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
 fi
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -30,5 +31,5 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 
-PS1='___________________________________________________________________________________\n\u on \[\e[33m\]\w\[\e[0m\]\n => '
+PS1='\n\u on \[\e[33m\]\w\[\e[0m\]\n => '
 PS2='  > '
