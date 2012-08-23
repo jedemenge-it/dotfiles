@@ -31,5 +31,5 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 
-PS1='\n\u on \[\e[33m\]\w\[\e[0m\]\n => '
+PS1='\u on \[\e[33m\]\w\[\e[0m\]\n => '
 PS2='  > '
