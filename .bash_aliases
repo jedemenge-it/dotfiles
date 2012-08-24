@@ -5,3 +5,6 @@ alias t="tree -L 1"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ss='svn st'
+alias ssu='svn up'
+alias ssc='svn commit -m ""'
