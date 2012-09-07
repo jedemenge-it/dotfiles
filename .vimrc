@@ -122,6 +122,7 @@ endfunc
 " Tabwechsel rückwärts auf gr gemapped
 map gr gT
 
+
 " IntelliSense
 inoremap <C-Space> <C-X><C-O>
 autocmd FileType c set omnifunc=ccomplete#Complete
@@ -131,3 +132,13 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+
+
+" FuzzyFind
+nmap ,f :FufFileWithCurrentBufferDir<CR>
+nmap ,b :FufBuffer<CR>
+nmap ,t :FufTaggedFile<CR>
+
+
+" Läd ctags Datei aus aktuellem Verzeichnis
+set tags=ctags
