@@ -50,8 +50,8 @@ set go-=T
 let g:user_zen_expandabbr_key = '<C-e>'
 
 
-"Für tComment Kommentarfunktion (\c)
-map <leader>c <c-_><c-_>
+"Für tComment Kommentarfunktion (//)
+map // <c-_><c-_>
 
 
 "Mapt Einfügen Funktion auf leader + p
