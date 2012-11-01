@@ -69,7 +69,7 @@ snippet elseif
 		${2:// code...}
 	}
 # Tertiary conditional
-snippet t
+snippet tr
 	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
 snippet switch
 	switch ($${1:variable}) {
@@ -134,17 +134,23 @@ snippet log
 	- `strftime("%d.%m.%Y")` / menge / ${1:Eintrag}
 snippet par
 	@param		${1:$var}
+
+snippet prof
+	protected function ${1:funcName}(${2}) {
+		${3}
+	}
+
 snippet prf
 	private function ${1:funcName}(${2}) {
 		${3}
 	}
-
-
 
 snippet pf
 	public function ${1:funcName}(${2}) {
 		${3}
 	}
 
-
-
+snippet t
+	[ ] ${1:ToDo Item}
+snippet st
+	[x] ${1:ToDo Item}
