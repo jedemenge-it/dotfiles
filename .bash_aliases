@@ -1,4 +1,4 @@
-alias g="git status"
+alias g="git status -sb"
 alias vim="gvim --remote"
 alias gpdev="git push dev1.zoomoringer.de develop:master"
 alias t="tree -L 1"
