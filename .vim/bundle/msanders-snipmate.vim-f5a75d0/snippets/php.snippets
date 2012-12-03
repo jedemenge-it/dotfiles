@@ -100,11 +100,20 @@ snippet fun
 # $... = array (...)
 snippet array
 	$${1:arrayName} = array('${2}' => ${3});${4}
+
+
+
+
+
+# MEINE EIGENEN -------------------------------------->
+
+
 snippet print
 	echo '<pre>';
 		print_r(${1});
 	echo '</pre>';
 	${2}
+
 snippet func
 	/**
 		@brief    ${1}
@@ -116,23 +125,30 @@ snippet func
 	${5:protected} function ${6:funcname}(${7}) {
 		${8}
 	} ${9}
-snippet <<
+
+snippet vecho
 	<?= ${1} ?>
+
 snippet input
 	CHtml::getInputField(${1});${2}
+
 snippet nvl
 	@CUtils::nvl(${1}, ${2});${3}
+
 snippet doc
 	/**
 		@brief		${1}
 		@version
 			- `strftime("%d.%m.%Y")` / menge / angelegt
 	*/
+
 snippet cex
 	throw new COMAException(${1:'Fehlermeldung'});
+
 snippet log
 	- `strftime("%d.%m.%Y")` / menge / ${1:Eintrag}
-snippet par
+
+snippet dokupar
 	@param		${1:$var}
 
 snippet prof
@@ -152,5 +168,6 @@ snippet pf
 
 snippet t
 	[ ] ${1:ToDo Item}
-snippet st
-	[x] ${1:ToDo Item}
+
+snippet par
+	$this->AppVC->par[${1}]

@@ -80,7 +80,7 @@ set hidden
 
 if has('gui_running')
 	colorscheme solarized
-    set background=light 
+    set background=dark 
 endif
 
 set guifont=Monospace\ 9
