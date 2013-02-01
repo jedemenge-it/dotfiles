@@ -35,7 +35,6 @@ set mousehide
 "Tabweite
 set tabstop=4
 set shiftwidth=4
-"set expandtab
 
 "Einrückung  
 set smartindent  
@@ -142,3 +141,17 @@ nmap ,t :FufTaggedFile<CR>
 
 " Läd ctags Datei aus aktuellem Verzeichnis
 set tags=ctags
+
+func! SetSoftTabs()
+  exec "set tabstop=2" 
+  exec "set shiftwidth=2" 
+  exec "set expandtab"
+endfunc
+func! SetHardTabs()
+  exec "set tabstop=4" 
+  exec "set shiftwidth=4" 
+  exec "set noexpandtab"
+endfunc
+
+nnoremap <leader>1 :call SetSoftTabs() <CR>
+nnoremap <leader>2 :call SetHardTabs() <CR>
