@@ -1,3 +1,8 @@
+Hinweise
+--------
+
+Unter Mac OS muss bashrc als bash_profiles verwendet werden.
+
 ToDo's
 ------
 
