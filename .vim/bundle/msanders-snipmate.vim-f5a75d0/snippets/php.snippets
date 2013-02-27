@@ -158,3 +158,24 @@ snippet t
 	[ ] ${1:ToDo Item}
 snippet par
 	$this->AppVC->par[${1}]
+snippet cfconfig
+	$criteriaConfig = array(
+		'${1:Gruppe 1}' => array(
+			${2}
+		),
+	);
+snippet cfcriteria
+	'${1:Kriterium-ID}' => array(
+		'DISPLAY_NAME'		=> '${2}',
+		'FIELD_NAME'		=> array('${3}'),
+		'TYPE' 				=> array('${4:VARCHAR}'),
+		'DATAPICKER_VAL'	=> array(
+			'DATA' 				=>	'${5}',
+			'ID_FIELD'			=>	'${6}',
+			'DATA_PICKER'		=>	'${7:AUTOCOMPLETE}',					
+		),
+	),
+snippet cfilter
+	$cfilter = new CFilter(${1:$filterID}, ${2:$parName}, ${3:$parData}, ${4:$criteriaConfig}, ${5:array('conn' => $conn)});${6}
+snippet $
+	$this->
