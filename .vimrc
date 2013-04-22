@@ -6,6 +6,7 @@ filetype plugin on
 filetype indent on  
 syntax on
 
+let mapleader = '-'
 
 let g:html_indent_inctags = ""
 
@@ -97,7 +98,6 @@ map <silent><F8> :tabnew ~/.vimrc <CR>
 iab teh the
 iab todo //TODO:
 iab extend extends
-iab << <%= %>
 
 
 " Completezeug
