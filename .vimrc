@@ -6,9 +6,10 @@ filetype plugin on
 filetype indent on  
 syntax on
 
-let mapleader = '-'
-
 let g:html_indent_inctags = ""
+
+" Damit der rechte scrollbalken im Vollbildmodus nicht stoert
+set guioptions-=r
 
 
 set nocompatible
@@ -18,6 +19,7 @@ set showcmd
 set number
 set foldenable
 set nowrap
+
 
 set directory=~/.vim/tmp/
 
