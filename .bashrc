@@ -13,7 +13,7 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-#kürzt verzeichnisse ab
+#kuerzt verzeichnisse ab
 export PROMPT_DIRTRIM=5
 
 
@@ -30,6 +30,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 	. /etc/bash_completion
 fi
 
+if [ -f ~/.git-completion.bash ]; then
+	source ~/.git-completion.bash
+fi
 
-PS1='\u on \[\e[33m\]\w\[\e[0m\]\n => '
-PS2='  > '
+PS1='[\u \[\e[33m\]\w\[\e[0m\]]$ '
+PS2=' $ '
