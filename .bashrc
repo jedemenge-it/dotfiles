@@ -14,7 +14,7 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 #kuerzt verzeichnisse ab
-export PROMPT_DIRTRIM=5
+export PROMPT_DIRTRIM=3
 
 
 if [ -f ~/.bash_aliases ]; then
@@ -34,5 +34,5 @@ if [ -f ~/.git-completion.bash ]; then
 	source ~/.git-completion.bash
 fi
 
-PS1='[\u \[\e[33m\]\w\[\e[0m\]]$ '
+PS1='[\u \[\e[33m\]\W\[\e[0m\]]$ '
 PS2=' $ '
