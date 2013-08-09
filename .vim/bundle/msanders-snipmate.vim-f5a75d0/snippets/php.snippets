@@ -180,42 +180,57 @@ snippet cfilter
 snippet $
 	$this->${1}
 snippet model
-	<?php namespace ${1:apps\analysedb\app\models};
+	<?php namespace ${1:apps\datenmanagementportal\globals\models};
 
 	/**
 		@file
 		<pre>
 			----------------------------------------------------------------
 			Status:       [x] in Bearbeitung
-						  [ ] Release Candidate
+			              [ ] Release Candidate
 			----------------------------------------------------------------
 			Beschreibung: 
 			----------------------------------------------------------------
 			Datum       Wer       Version   Was
-			${2:13.03.2013}  menge               Datei angelegt
+			`strftime("%d.%m.%Y")`  menge               Datei angelegt
 			----------------------------------------------------------------
 		</pre>
 	*/
 
 	/**
-		@brief		${3}
-		@ingroup	${4:pb302_models}
+		@brief    ${2}
 		@version
-			- $2 / menge / angelegt
+			- `strftime("%d.%m.%Y")` / menge / angelegt
 	*/
-	class ${5} extends BaseModel {
+	class ${3} extends \BaseModel {
 
-		protected static $owner = '${6:ufz_gefo}';
-		protected static $table = '${7}';
-		protected static $pkField = '${8}';
-		// protected static $arReferences = array(
-		// 	'evaluation' => array(
-		// 		'class' => 'DBTable',
-		//		'owner' => '',
-		//		'table' => '',
-		// 		'model_class' => 'apps\uawt\bibliotheken\models\Evaluation',	// nicht für DBTable interessant sondern nur für BaseModel. 
-		//		'reference_type' => 'has_many',
-		// 		'where' => 'eva_id=<%eva_id%>'
-		// 	),
-		// );
+		public static $OWNER = '${4:<owner>}';
+		public static $TABLE = '${5:<table>}';
+
+		protected static $PK_FIELD = '${6:<pk-feldname>}';
+		protected static $REFERENCES = array(
+			'project' => array(                      
+				'class' => 'Projekt',	            
+				'reference_type' => 'has_one',     
+				'where' => 'prj_nr = <%prj_nr%>', 
+				'order' => '',
+			),
+		);
 	}
+snippet ns
+	apps\datenmanagementportal\$1
+snippet fileheader
+	/**
+		@file
+		<pre>
+			----------------------------------------------------------------
+			Status:       [x] in Bearbeitung
+			              [ ] Release Candidate
+			----------------------------------------------------------------
+			Beschreibung: $1 
+			----------------------------------------------------------------
+			Datum       Wer       Version   Was
+			`strftime("%d.%m.%Y")`  menge               Datei angelegt
+			----------------------------------------------------------------
+		</pre>
+	*/

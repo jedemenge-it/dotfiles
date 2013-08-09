@@ -30,9 +30,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 	. /etc/bash_completion
 fi
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+	. $(brew --prefix)/etc/bash_completion
+fi
+
 if [ -f ~/.git-completion.bash ]; then
 	source ~/.git-completion.bash
 fi
 
-PS1='[\u \[\e[33m\]\W\[\e[0m\]]$ '
+PS1='[\[\e[33m\]\W\[\e[0m\]] '
 PS2=' $ '

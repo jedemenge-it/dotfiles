@@ -82,7 +82,7 @@ set hidden
 
 if has('gui_running')
 	colorscheme solarized
-    set background=dark 
+    set background=light 
 endif
 
 set guifont=Monospace\ 9
@@ -107,7 +107,7 @@ set completeopt=longest,menuone
 
 
 "SVN Mappings
-nnoremap <F6> :call SvnCommitAll() <CR>
+"nnoremap <F6> :call SvnCommitAll() <CR>
 nnoremap <F5> :call SvnCommit() <CR>
 "svn functionen
 func! SvnCommitAll()
