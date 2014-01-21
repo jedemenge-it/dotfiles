@@ -48,6 +48,10 @@ set autoindent
 set go-=T  
 
 
+"fuer caseinsensitive suche
+set ignorecase
+
+
 "Ändert den Zen Coding expand Befehl zu Ctrl+e
 let g:user_zen_expandabbr_key = '<C-e>'
 
@@ -155,5 +159,6 @@ func! SetHardTabs()
   exec "set noexpandtab"
 endfunc
 
-nnoremap <leader>1 :call SetSoftTabs() <CR>
-nnoremap <leader>2 :call SetHardTabs() <CR>
+"nnoremap <leader>1 :call SetSoftTabs() <CR>
+"nnoremap <leader>2 :call SetHardTabs() <CR>
+nnoremap <leader>s :exec "!php -l %" <CR>

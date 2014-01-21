@@ -112,7 +112,6 @@ snippet print
 	echo '<pre>';
 		print_r(${1});
 	echo '</pre>';
-	${2}
 snippet func
 	/**
 		@brief    ${1}
@@ -132,12 +131,12 @@ snippet nvl
 	@CUtils::nvl(${1}, ${2})${3}
 snippet doc
 	/**
-		@brief		${1}
+		@brief      ${1}
 		@version
-			- `strftime("%d.%m.%Y")` / menge / angelegt
+		    - `strftime("%d.%m.%Y")` / menge / angelegt
 	*/
 snippet cex
-	throw new COMAException(${1:'Fehlermeldung'});
+	throw new \COMAException(${1:'Fehlermeldung'});
 snippet log
 	- `strftime("%d.%m.%Y")` / menge / ${1:Eintrag}
 snippet dokupar
@@ -183,21 +182,6 @@ snippet model
 	<?php namespace ${1:apps\datenmanagementportal\globals\models};
 
 	/**
-		@file
-		<pre>
-			----------------------------------------------------------------
-			Status:       [x] in Bearbeitung
-			              [ ] Release Candidate
-			----------------------------------------------------------------
-			Beschreibung: 
-			----------------------------------------------------------------
-			Datum       Wer       Version   Was
-			`strftime("%d.%m.%Y")`  menge               Datei angelegt
-			----------------------------------------------------------------
-		</pre>
-	*/
-
-	/**
 		@brief    ${2}
 		@version
 			- `strftime("%d.%m.%Y")` / menge / angelegt
@@ -218,7 +202,7 @@ snippet model
 		);
 	}
 snippet ns
-	apps\datenmanagementportal\$1
+	apps\datenmanagementportal\${1}
 snippet fileheader
 	/**
 		@file
@@ -234,3 +218,7 @@ snippet fileheader
 			----------------------------------------------------------------
 		</pre>
 	*/
+snippet appvc
+	$this->AppVC->${1}
+snippet tex
+	$this->texte->${1}
