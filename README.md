@@ -1,7 +1,8 @@
 Hinweise
 --------
 
-Unter Mac OS muss bashrc als bash_profiles verwendet werden.
+- Unter Mac OS muss bashrc als bash_profiles verwendet werden
+- unter .vim muss noch das Verzeichnis tmp angelegt werden (dort werden die swp files gespeichert)
 
 ToDo's
 ------
