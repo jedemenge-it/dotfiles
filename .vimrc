@@ -161,4 +161,4 @@ endfunc
 
 "nnoremap <leader>1 :call SetSoftTabs() <CR>
 "nnoremap <leader>2 :call SetHardTabs() <CR>
-nnoremap <leader>s :exec "!php -l %" <CR>
+nnoremap <leader>p :exec "!php -l %" <CR>
