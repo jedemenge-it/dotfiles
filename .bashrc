@@ -40,3 +40,8 @@ fi
 
 PS1='[\[\e[33m\]\W\[\e[0m\]] '
 PS2=' $ '
+
+#eval "$(/Users/menge/tropos/bin/tropos init -)"
+export PATH=/usr/local/sbin:$PATH
+
+export PATH=~/Development/tropos-cli/bin:~/bin:$PATH

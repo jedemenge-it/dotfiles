@@ -159,6 +159,11 @@ func! SetHardTabs()
   exec "set noexpandtab"
 endfunc
 
+func! PHPParse()
+	exec "w"
+	exec "!php -l %"
+endfunc
+
 "nnoremap <leader>1 :call SetSoftTabs() <CR>
 "nnoremap <leader>2 :call SetHardTabs() <CR>
-nnoremap <leader>p :exec "!php -l %" <CR>
+nnoremap <leader>p :call PHPParse() <CR>
