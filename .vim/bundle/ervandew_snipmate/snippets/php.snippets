@@ -2,16 +2,6 @@ snippet php
 	<?php
 	${1}
 	?>
-snippet ec
-	echo "${1:string}"${2};
-snippet inc
-	include '${1:file}';${2}
-snippet inc1
-	include_once '${1:file}';${2}
-snippet req
-	require '${1:file}';${2}
-snippet req1
-	require_once '${1:file}';${2}
 # $GLOBALS['...']
 snippet globals
 	$GLOBALS['${1:variable}']${2: = }${3:something}${4:;}${5}
@@ -36,104 +26,6 @@ snippet /*
 	/**
 	 * ${1}
 	 **/
-# Class - post doc
-snippet doc_cp
-	/**
-	 * ${1:undocumented class}
-	 *
-	 * @package ${2:default}
-	 * @author ${3:`g:snips_author`}
-	**/${4}
-# Class Variable - post doc
-snippet doc_vp
-	/**
-	 * ${1:undocumented class variable}
-	 *
-	 * @var ${2:string}
-	 **/${3}
-# Class Variable
-snippet doc_v
-	/**
-	 * ${3:undocumented class variable}
-	 *
-	 * @var ${4:string}
-	 **/
-	${1:var} $${2};${5}
-# Class
-snippet doc_c
-	/**
-	 * ${3:undocumented class}
-	 *
-	 * @packaged ${4:default}
-	 * @author ${5:`g:snips_author`}
-	 **/
-	${1:}class ${2:}
-	{${6}
-	} // END $1class $2
-# Constant Definition - post doc
-snippet doc_dp
-	/**
-	 * ${1:undocumented constant}
-	 **/${2}
-# Constant Definition
-snippet doc_d
-	/**
-	 * ${3:undocumented constant}
-	 **/
-	define(${1}, ${2});${4}
-# Function - post doc
-snippet doc_fp
-	/**
-	 * ${1:undocumented function}
-	 *
-	 * @return ${2:void}
-	 * @author ${3:`g:snips_author`}
-	 **/${4}
-# Function signature
-snippet doc_s
-	/**
-	 * ${4:undocumented function}
-	 *
-	 * @return ${5:void}
-	 * @author ${6:`g:snips_author`}
-	 **/
-	${1}function ${2}(${3});${7}
-# Function
-snippet doc_f
-	/**
-	 * ${4:undocumented function}
-	 *
-	 * @return ${5:void}
-	 * @author ${6:`g:snips_author`}
-	 **/
-	${1}function ${2}(${3})
-	{${7}
-	}
-# Header
-snippet doc_h
-	/**
-	 * ${1}
-	 *
-	 * @author ${2:`g:snips_author`}
-	 * @version ${3:$Id$}
-	 * @copyright ${4:$2}, `strftime('%d %B, %Y')`
-	 * @package ${5:default}
-	 **/
-	
-	/**
-	 * Define DocBlock
-	 *//
-# Interface
-snippet doc_i
-	/**
-	 * ${2:undocumented class}
-	 *
-	 * @package ${3:default}
-	 * @author ${4:`g:snips_author`}
-	 **/
-	interface ${1:}
-	{${5}
-	} // END interface $1
 # class ...
 snippet class
 	/**
@@ -147,13 +39,7 @@ snippet class
 			${6:// code...}
 		}
 	}
-# define(...)
-snippet def
-	define('${1}'${2});${3}
-# defined(...)
-snippet def?
-	${1}defined('${2}')${3}
-snippet wh
+snippet while
 	while (${1:/* condition */}) {
 		${2:// code...}
 	}
@@ -169,7 +55,8 @@ snippet if
 snippet ife
 	if (${1:/* condition */}) {
 		${2:// code...}
-	} else {
+	} 
+	else {
 		${3:// code...}
 	}
 	${4}
@@ -182,7 +69,7 @@ snippet elseif
 		${2:// code...}
 	}
 # Tertiary conditional
-snippet t
+snippet tr
 	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
 snippet switch
 	switch ($${1:variable}) {
@@ -207,10 +94,136 @@ snippet foreach
 		${3:// code...}
 	}
 snippet fun
-	${1:public }function ${2:FunctionName}(${3})
-	{
+	${1:public }function ${2:FunctionName}(${3}) {
 		${4:// code...}
 	}
 # $... = array (...)
 snippet array
 	$${1:arrayName} = array('${2}' => ${3});${4}
+
+
+
+
+
+# MEINE EIGENEN -------------------------------------->
+
+
+snippet print
+	echo '<pre>';
+		print_r(${1});
+	echo '</pre>';
+snippet func
+	/**
+		@brief    ${1}
+		@param    ${2}
+		@return   ${3}
+		@version
+		  - `strftime("%d.%m.%Y")` / menge / angelegt
+	*/
+	${5:protected} function ${6:funcname}(${7}) {
+		${8}
+	} ${9}
+snippet e
+	<?= ${1} ?>
+snippet input
+	CHtml::getInputField(${1})${2}
+snippet nvl
+	@CUtils::nvl(${1}, ${2})${3}
+snippet doc
+	/**
+		@brief      ${1}
+		@version
+		    - `strftime("%d.%m.%Y")` / menge / angelegt
+	*/
+snippet cex
+	throw new \COMAException(${1:'Fehlermeldung'});
+snippet log
+	- `strftime("%d.%m.%Y")` / menge / ${1:Eintrag}
+snippet dokupar
+	@param		${1:$var}
+snippet prof
+	protected function ${1:funcName}(${2}) {
+		${3}
+	}
+snippet prf
+	private function ${1:funcName}(${2}) {
+		${3}
+	}
+snippet pf
+	public function ${1:funcName}(${2}) {
+		${3}
+	}
+snippet t
+	[ ] ${1:ToDo Item}
+snippet par
+	$this->AppVC->par[${1}]
+snippet cfconfig
+	$criteriaConfig = array(
+		'${1:Gruppe 1}' => array(
+			${2}
+		),
+	);
+snippet cfcriteria
+	'${1:Kriterium-ID}' => array(
+		'DISPLAY_NAME'		=> '${2}',
+		'FIELD_NAME'		=> array('${3}'),
+		'TYPE' 				=> array('${4:VARCHAR}'),
+		'DATAPICKER_VAL'	=> array(
+			'DATA' 				=>	'${5}',
+			'ID_FIELD'			=>	'${6}',
+			'DATA_PICKER'		=>	'${7:AUTOCOMPLETE}',					
+		),
+	),
+snippet cfilter
+	$cfilter = new CFilter(${1:$filterID}, ${2:$parName}, ${3:$parData}, ${4:$criteriaConfig}, ${5:array('conn' => $conn)});${6}
+snippet $
+	$this->${1}
+snippet model
+	<?php namespace ${1:apps\datenmanagementportal\globals\models};
+
+	/**
+		@brief    ${2}
+		@version
+			- `strftime("%d.%m.%Y")` / menge / angelegt
+	*/
+	class ${3} extends \BaseModel {
+
+		public static $OWNER = '${4:<owner>}';
+		public static $TABLE = '${5:<table>}';
+
+		protected static $PK_FIELD = '${6:<pk-feldname>}';
+		protected static $REFERENCES = array(
+			'project' => array( 
+				'class' => 'Projekt',
+				'reference_type' => 'has_one',
+				'where' => 'prj_nr = <%prj_nr%>',
+				'order' => '',
+			),
+		);
+	}
+snippet ns
+	apps\datenmanagementportal\${1}
+snippet fileheader
+	/**
+		@file
+		<pre>
+			----------------------------------------------------------------
+			Status:       [x] in Bearbeitung
+			              [ ] Release Candidate
+			----------------------------------------------------------------
+			Beschreibung: $1 
+			----------------------------------------------------------------
+			Datum       Wer       Version   Was
+			`strftime("%d.%m.%Y")`  menge               Datei angelegt
+			----------------------------------------------------------------
+		</pre>
+	*/
+snippet appvc
+	$this->AppVC->${1}
+snippet tex
+	$this->texte->${1}
+snippet conn
+	$this->AppVC->connPROBEN${1}
+snippet lang
+	public $${1:name}_DE = '${2}';
+	public $$1_EN = 'TODO';${3}
