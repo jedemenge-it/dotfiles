@@ -8,6 +8,7 @@ alias l='ls -CF'
 alias ss='svn st'
 alias ssu='svn up'
 alias ssc='svn commit -m ""'
+alias d='doing'
 
 if [ -f ~/.bash_aliases_local ]; then
 	. ~/.bash_aliases_local
