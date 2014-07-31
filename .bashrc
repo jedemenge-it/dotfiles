@@ -44,3 +44,5 @@ PS2=' $ '
 #eval "$(/Users/menge/tropos/bin/tropos init -)"
 # /usr/local/(s)bin ist erwaehnt, damit die Homebrew tools vor den Systemtools aus /usr/bin genommen werden
 export PATH=~/Development/tropos-cli/bin:~/bin:/usr/local/sbin:/usr/local/bin:$PATH
+
+export EDITOR=vi
