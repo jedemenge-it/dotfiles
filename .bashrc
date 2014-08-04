@@ -5,17 +5,17 @@ HISTCONTROL=ignoredups:ignorespace
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
-#kuerzt verzeichnisse ab
-export PROMPT_DIRTRIM=3
-
+# by Christopher Hirschmann @ Uberspace
+# read this number of lines into history buffer on startup
+# carefull with this, it will increase bash memory footprint and load time
+export HISTSIZE=10000
+# HISTFILESIZE is set *after* bash reads the history file
+# (which is done after reading any configs like .bashrc)
+# if it is unset at this point it is set to the same value as HISTSIZE
+# therefore we must set it to NIL, in which case it isn't "unset",
+# but doesn't have a value either, go figure
+#unset HISTFILESIZE
+export HISTFILESIZE=""
 
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
@@ -36,7 +36,6 @@ fi
 PS1='[\[\e[33m\]\W\[\e[0m\]] '
 PS2=' $ '
 
-#eval "$(/Users/menge/tropos/bin/tropos init -)"
 # /usr/local/(s)bin ist erwaehnt, damit die Homebrew tools vor den Systemtools aus /usr/bin genommen werden
 export PATH=~/Development/tropos-cli/bin:~/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
