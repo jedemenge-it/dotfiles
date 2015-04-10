@@ -11,6 +11,9 @@ alias scpr='scp -i ~/.ssh/menge'
 
 alias tree='tree -L 1'
 
+alias t='tropos'
+alias s='tropos show'
+
 if [ -f ~/.bash_aliases_local ]; then
 	. ~/.bash_aliases_local
 fi
