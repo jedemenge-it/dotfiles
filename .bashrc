@@ -33,8 +33,10 @@ fi
 # 	source ~/.git-completion.bash
 # fi
 
-PS1='[\[\e[33m\]\W\[\e[0m\]] '
-PS2=' $ '
+source ~/.dotfiles/.git-prompt.sh
+
+PS1='\[\e[33m\]\W\[\e[0m\]$(__git_ps1 " [%s]") > '
+PS2=' >> '
 
 # /usr/local/(s)bin ist erwaehnt, damit die Homebrew tools vor den Systemtools aus /usr/bin genommen werden
 export PATH=~/Development/tropos-cli/bin:~/bin:/usr/local/sbin:/usr/local/bin:$PATH
@@ -45,3 +47,10 @@ if [ -d ~/.rbenv ]; then
 fi
 
 export EDITOR=vi
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
+export ANSIBLE_NOCOWS=1
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
