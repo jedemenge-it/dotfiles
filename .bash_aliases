@@ -18,6 +18,8 @@ alias s='tropos show'
 
 alias play='ansible-playbook servers.yml'
 
+alias tele="cat ~/wiki/benutzerverwaltung/telefonliste.md | grep"
+
 if [ -f ~/.bash_aliases_local ]; then
 	. ~/.bash_aliases_local
 fi
