@@ -54,3 +54,6 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 export PATH
 export ANSIBLE_NOCOWS=1
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
