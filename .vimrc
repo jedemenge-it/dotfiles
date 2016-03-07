@@ -13,7 +13,7 @@ set guioptions-=r
 
 
 set nocompatible
-set enc=utf-8
+set encoding=utf-8
 set ruler
 set showcmd
 set number

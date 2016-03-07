@@ -20,6 +20,8 @@ alias play='ansible-playbook servers.yml'
 
 alias tele="cat ~/wiki/benutzerverwaltung/telefonliste.md | grep"
 
+alias pki="javaws https://pki.pca.dfn.de/guira/guira.jnlp &"
+
 if [ -f ~/.bash_aliases_local ]; then
 	. ~/.bash_aliases_local
 fi
