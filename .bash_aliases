@@ -16,7 +16,7 @@ alias tree='tree -L 1'
 alias t='tropos'
 alias s='tropos show'
 
-alias play='ansible-playbook servers.yml'
+alias play='ansible-playbook --vault-password-file=~/.ansible-conf servers.yml'
 
 alias tele="cat ~/wiki/benutzerverwaltung/telefonliste.md | grep"
 
