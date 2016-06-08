@@ -1,0 +1,3 @@
+#!/bin/bash -v
+
+ln -s ~/.dotfiles/.inputrc ~/.inputrc
