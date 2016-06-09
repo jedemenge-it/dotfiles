@@ -25,13 +25,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 	. /etc/bash_completion
 fi
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-	. $(brew --prefix)/etc/bash_completion
+if [ -d /usr/local/etc/bash_completion.d ]; then
+	. /usr/local/etc/bash_completion.d/*
 fi
-
-# if [ -f ~/.git-completion.bash ]; then
-# 	source ~/.git-completion.bash
-# fi
 
 source ~/.dotfiles/.git-prompt.sh
 
@@ -42,21 +38,14 @@ PS2=' >> '
 export PATH=~/Development/tropos-cli/bin:~/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
 if [ -d ~/.rbenv ]; then
-	export PATH="$HOME/.rbenv/bin:$PATH"
 	eval "$(rbenv init -)"
 fi
 
 export EDITOR=vi
-
-# Setting PATH for Python 3.4
-# The orginal version is saved in .profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-export PATH
 export ANSIBLE_NOCOWS=1
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-#export PATH=${HOME}/homebrew/bin:${PATH}
 
 set -o vi
