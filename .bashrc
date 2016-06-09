@@ -26,10 +26,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 if [ -d /usr/local/etc/bash_completion.d ]; then
-	. /usr/local/etc/bash_completion.d/*
+	. /usr/local/etc/bash_completion.d/git-completion.bash
+	. /usr/local/etc/bash_completion.d/git-prompt.sh
+	. /usr/local/etc/bash_completion.d/brew
+	. /usr/local/etc/bash_completion.d/npm
 fi
-
-source ~/.dotfiles/.git-prompt.sh
 
 PS1='\[\e[33m\]\W\[\e[0m\]$(__git_ps1 " [%s]") > '
 PS2=' >> '
