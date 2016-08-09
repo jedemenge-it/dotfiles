@@ -32,7 +32,7 @@ if [ -d /usr/local/etc/bash_completion.d ]; then
 	. /usr/local/etc/bash_completion.d/npm
 fi
 
-PS1='} \[\e[33m\]\W\[\e[0m\]$(__git_ps1 " [%s]") > '
+PS1=' \[\e[33m\]\W\[\e[0m\]$(__git_ps1 " [%s]") > '
 PS2=' >> '
 
 # /usr/local/(s)bin ist erwaehnt, damit die Homebrew tools vor den Systemtools aus /usr/bin genommen werden

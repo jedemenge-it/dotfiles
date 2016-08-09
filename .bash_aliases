@@ -5,7 +5,8 @@ alias gs="git show-branch"
 
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='less'
+alias j='jrnl'
 
 alias sshr='ssh -i ~/.ssh/menge -l root'
 alias sshm='ssh -i ~/.ssh/menge -l macadmin'
@@ -21,6 +22,9 @@ alias play='ansible-playbook servers.yml'
 alias tele="cat ~/wiki/benutzerverwaltung/telefonliste.md | grep"
 
 alias pki="javaws https://pki.pca.dfn.de/guira/guira.jnlp &"
+
+alias habit="cat ~/Drafts/journal.tpl | j habit && j habit -1 --edit"
+alias 5min="cat ~/Drafts/5min.tpl | j && j -1 --edit"
 
 if [ -f ~/.bash_aliases_local ]; then
 	. ~/.bash_aliases_local
