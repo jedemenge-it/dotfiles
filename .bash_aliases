@@ -9,10 +9,9 @@ alias l='less'
 alias j='jrnl'
 
 alias sshr='ssh -i ~/.ssh/menge -l root'
+alias sshg='ssh -p 5555 -A -t tropos@localhost ssh -t -l root'
 alias sshm='ssh -i ~/.ssh/menge -l macadmin'
 alias scpr='scp -i ~/.ssh/menge'
-
-alias tree='tree -L 1'
 
 alias t='tropos'
 alias s='tropos show'
@@ -21,10 +20,12 @@ alias play='ansible-playbook servers.yml'
 
 alias tele="cat ~/wiki/benutzerverwaltung/telefonliste.md | grep"
 
-alias pki="javaws https://pki.pca.dfn.de/guira/guira.jnlp &"
+alias pki="javaws https://pki.pca.dfn.de/guira/guira.jnlp 2> /dev/null &"
 
 alias habit="cat ~/Drafts/journal.tpl | j habit && j habit -1 --edit"
 alias 5min="cat ~/Drafts/5min.tpl | j && j -1 --edit"
+
+alias v=vagrant
 
 if [ -f ~/.bash_aliases_local ]; then
 	. ~/.bash_aliases_local

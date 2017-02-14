@@ -8,6 +8,8 @@ syntax on
 
 let g:html_indent_inctags = ""
 
+"set tw=75
+
 " Damit der rechte scrollbalken im Vollbildmodus nicht stoert
 set guioptions-=r
 

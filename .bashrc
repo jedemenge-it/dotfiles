@@ -32,8 +32,8 @@ if [ -d /usr/local/etc/bash_completion.d ]; then
 	. /usr/local/etc/bash_completion.d/npm
 fi
 
-PS1=' \[\e[33m\]\W\[\e[0m\]$(__git_ps1 " [%s]") > '
-PS2=' >> '
+PS1='\[\e[33m\]\W\[\e[0m\]$(__git_ps1 " [%s]") > '
+PS2='>> '
 
 # /usr/local/(s)bin ist erwaehnt, damit die Homebrew tools vor den Systemtools aus /usr/bin genommen werden
 export PATH=~/Development/tropos-cli/bin:~/bin:/usr/local/sbin:/usr/local/bin:$PATH
@@ -46,4 +46,4 @@ export EDITOR=vi
 export ANSIBLE_NOCOWS=1
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
-set -o vi
+#set -o vi
