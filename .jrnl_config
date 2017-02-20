@@ -1,0 +1,18 @@
+{
+  "default_hour": 9, 
+  "timeformat": "%Y-%m-%d %H:%M", 
+  "linewrap": 79, 
+  "encrypt": false, 
+  "editor": "vi", 
+  "default_minute": 0, 
+  "highlight": true, 
+  "journals": {
+    "dayone": "~/Dropbox/Apps/Day One/Journal.dayone",
+	"habit": "~/Dropbox/habits_journal.txt",
+    "default": {
+        "journal": "~/Dropbox/journal.txt",
+        "encrypt": true
+    }
+  }, 
+  "tagsymbols": "@"
+}
