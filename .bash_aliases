@@ -9,9 +9,10 @@ alias l='less'
 alias j='jrnl'
 
 alias sshr='ssh -i ~/.ssh/menge -l root'
-alias sshg='ssh -p 5555 -A -t tropos@localhost ssh -t -l root'
-alias sshm='ssh -i ~/.ssh/menge -l macadmin'
+alias sshg='ssh -i ~/.ssh/menge -o "ProxyCommand ssh -q -W %h:%p gateway-x" -l root'
+
 alias scpr='scp -i ~/.ssh/menge'
+alias scpg='scp -i ~/.ssh/menge -o "ProxyCommand ssh -q -W %h:%p gateway-x"'
 
 alias t='tropos'
 alias s='tropos show'
