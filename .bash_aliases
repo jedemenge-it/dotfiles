@@ -18,7 +18,7 @@ alias t='tropos'
 alias s='tropos show'
 
 alias play='ansible-playbook'
-alias xplay='ansible-playbook --ssh-common-args=\'-o "ProxyCommand ssh -q -W %h:%p gateway-x"\''
+alias xplay='ansible-playbook --ssh-common-args="-o ProxyCommand ssh -q -W %h:%p gateway-x"'
 
 alias tele="cat ~/wiki/benutzerverwaltung/telefonliste.md | grep"
 
