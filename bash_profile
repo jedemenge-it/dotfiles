@@ -25,18 +25,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 	. /etc/bash_completion
 fi
 
-if [ -d /usr/local/etc/bash_completion.d ]; then
-	. /usr/local/etc/bash_completion.d/git-completion.bash
-	. /usr/local/etc/bash_completion.d/git-prompt.sh
-	. /usr/local/etc/bash_completion.d/brew
-	. /usr/local/etc/bash_completion.d/npm
-fi
-
-PS1='\[\e[33m\]\W\[\e[0m\]$(__git_ps1 " [%s]") > '
+PS1='\h :: \[\e[33m\]\W\[\e[0m\] > '
 PS2='>> '
-
-# /usr/local/(s)bin ist erwaehnt, damit die Homebrew tools vor den Systemtools aus /usr/bin genommen werden
-export PATH=~/Development/tropos-cli/bin:~/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
 if [ -d ~/.rbenv ]; then
 	eval "$(rbenv init -)"
@@ -45,5 +35,3 @@ fi
 export EDITOR=vi
 export ANSIBLE_NOCOWS=1
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
-
-#set -o vi
