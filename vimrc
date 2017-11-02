@@ -21,6 +21,8 @@ set showcmd
 set number
 set nowrap
 
+"verschluesselung mit blowfish2
+set cryptmethod=blowfish2
 
 set directory=~/.vim/tmp/
 
