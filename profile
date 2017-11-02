@@ -30,6 +30,7 @@ if [ -d /usr/local/etc/bash_completion.d ]; then
 	. /usr/local/etc/bash_completion.d/git-prompt.sh
 	. /usr/local/etc/bash_completion.d/brew
 	. /usr/local/etc/bash_completion.d/npm
+	. /usr/local/etc/bash_completion.d/cheat.bash
 fi
 
 PS1='\h :: \[\e[33m\]\W\[\e[0m\]$(__git_ps1 " [%s]") > '

@@ -8,7 +8,6 @@
   "highlight": true, 
   "journals": {
     "dayone": "~/Dropbox/Apps/Day One/Journal.dayone",
-	"habit": "~/Dropbox/habits_journal.txt",
     "default": {
         "journal": "~/Dropbox/journal.txt",
         "encrypt": true
