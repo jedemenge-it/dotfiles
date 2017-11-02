@@ -1,8 +1,12 @@
 #!/bin/bash -v
 
-ln -s ~/.dotfiles/.inputrc ~/.inputrc
-ln -s ~/.dotfiles/.bash_aliases ~/.bash_aliases
-ln -s ~/.dotfiles/.bashrc ~/.profile
-ln -s ~/.dotfiles/.vim ~/.vim
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/.jrnl_config ~/.jrnl_config
+ln -s ~/.dotfiles/bash_aliases ~/.bash_aliases
+ln -s ~/.dotfiles/vimrc ~/.vimrc
+
+if [ ! -L ~/.vim ]; then
+	ln -s ~/.dotfiles/.vim ~/.vim
+fi
+
+if [ -a /etc/redhat-release ]; then
+	ln -s ~/.dotfiles/i3 ~/.config/i3
+fi
