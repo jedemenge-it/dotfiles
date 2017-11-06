@@ -32,6 +32,10 @@ if [ -d ~/.rbenv ]; then
 	eval "$(rbenv init -)"
 fi
 
+if [ -d ~/bin ]; then
+	export PATH=~/bin:$PATH
+fi
+
 export EDITOR=vi
 export ANSIBLE_NOCOWS=1
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
