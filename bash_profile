@@ -25,10 +25,15 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 	. /etc/bash_completion
 fi
 
+if [ -f /usr/share/bash-completion/completions/pass ]; then
+	. /usr/share/bash-completion/completions/pass
+fi
+
 PS1='\h :: \[\e[33m\]\W\[\e[0m\] > '
 PS2='>> '
 
 if [ -d ~/.rbenv ]; then
+	export PATH=~/.rbenv/bin:$PATH
 	eval "$(rbenv init -)"
 fi
 
