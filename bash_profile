@@ -41,6 +41,12 @@ if [ -d ~/bin ]; then
 	export PATH=~/bin:$PATH
 fi
 
+if [ -d ~/tropos-cli ]; then
+	export PATH=~/tropos-cli/bin:$PATH
+fi
+
 export EDITOR=vi
 export ANSIBLE_NOCOWS=1
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
+export PATH=~/usr/node-8.9.1/bin:$PATH
