@@ -80,13 +80,6 @@ au FocusLost * :wa
 set hidden  
 
 
-"Farbschema und ein paar Anpassungen dafür
-"colorscheme twilight
-"hi Type gui=NONE
-"hi Comment gui=NONE
-"hi StatusLine gui=underline
-"hi StatusLineNC gui=underline
-
 if has('gui_running')
 	colorscheme solarized
     set background=light 
@@ -103,28 +96,8 @@ imap jj <esc>
 map <silent><F8> :tabnew ~/.vimrc <CR>
 
 
-" Rechtschreibkorrekturen / Shortcuts
-iab teh the
-iab todo //TODO:
-iab extend extends
-
-
 " Completezeug
 set completeopt=longest,menuone
-
-
-"SVN Mappings
-"nnoremap <F6> :call SvnCommitAll() <CR>
-nnoremap <F5> :call SvnCommit() <CR>
-"svn functionen
-func! SvnCommitAll()
-  exec "wa"
-  exec "silent !svn commit -m ''"
-endfunc
-func! SvnCommit()
-  exec "w"
-  exec "silent !svn commit %:. -m ''"
-endfunc
 
 
 " Tabwechsel rückwärts auf gr gemapped
@@ -140,33 +113,3 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-
-
-" FuzzyFind
-nmap ,f :FufFileWithCurrentBufferDir<CR>
-nmap ,b :FufBuffer<CR>
-nmap ,t :FufTaggedFile<CR>
-
-
-" Läd ctags Datei aus aktuellem Verzeichnis
-set tags=ctags
-
-func! SetSoftTabs()
-  exec "set tabstop=2" 
-  exec "set shiftwidth=2" 
-  exec "set expandtab"
-endfunc
-func! SetHardTabs()
-  exec "set tabstop=4" 
-  exec "set shiftwidth=4" 
-  exec "set noexpandtab"
-endfunc
-
-func! PHPParse()
-	exec "w"
-	exec "!php -l %"
-endfunc
-
-"nnoremap <leader>1 :call SetSoftTabs() <CR>
-"nnoremap <leader>2 :call SetHardTabs() <CR>
-nnoremap <leader>p :call PHPParse() <CR>

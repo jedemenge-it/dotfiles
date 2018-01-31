@@ -11,6 +11,10 @@
     "default": {
         "journal": "~/Dropbox/journal.txt",
         "encrypt": true
+    },
+    "jw": {
+        "journal": "~/Dropbox/jw.txt",
+        "encrypt": true
     }
   }, 
   "tagsymbols": "@"
