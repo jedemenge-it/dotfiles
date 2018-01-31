@@ -43,7 +43,7 @@ if [ -d ~/.rbenv ]; then
 	eval "$(rbenv init -)"
 fi
 
-export EDITOR=vi
+export EDITOR=vim
 export ANSIBLE_NOCOWS=1
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 

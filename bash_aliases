@@ -29,6 +29,9 @@ alias 5min="cat ~/Drafts/5min.tpl | j && j -1 --edit"
 
 alias v=vagrant
 
+# because i have a homebrew vim installation (to use blowfish2)
+alias vi=vim
+
 if [ -f ~/.bash_aliases_local ]; then
 	. ~/.bash_aliases_local
 fi
