@@ -9,4 +9,5 @@ fi
 
 if [ -a /etc/redhat-release ]; then
 	ln -s ~/.dotfiles/i3 ~/.config/i3
+	ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 fi

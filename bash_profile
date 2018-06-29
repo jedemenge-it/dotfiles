@@ -50,3 +50,7 @@ export ANSIBLE_NOCOWS=1
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
 export PATH=~/usr/node-8.9.1/bin:$PATH
+
+# find an existing ssh-agent and use it
+. .dotfiles/ssh-find-agent.sh
+ssh-find-agent -a || eval $(ssh-agent) > /dev/null
