@@ -31,6 +31,7 @@ if [ -d /usr/local/etc/bash_completion.d ]; then
 	. /usr/local/etc/bash_completion.d/brew
 	. /usr/local/etc/bash_completion.d/npm
 	. /usr/local/etc/bash_completion.d/cheat.bash
+	. /usr/local/etc/bash_completion.d/tmux
 fi
 
 PS1='\h :: \[\e[33m\]\W\[\e[0m\]$(__git_ps1 " [%s]") > '
@@ -46,5 +47,3 @@ fi
 export EDITOR=vim
 export ANSIBLE_NOCOWS=1
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
-
-#set -o vi

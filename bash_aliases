@@ -1,3 +1,4 @@
+alias git='LANG=en_US git'
 alias g="git status -sb"
 alias gl="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias gc="git diff --check"
@@ -24,13 +25,12 @@ alias tele="cat ~/wiki/benutzerverwaltung/telefonliste.md | grep"
 
 alias pki="javaws https://pki.pca.dfn.de/guira/guira.jnlp 2> /dev/null &"
 
-alias habit="cat ~/Drafts/journal.tpl | j habit && j habit -1 --edit"
-alias 5min="cat ~/Drafts/5min.tpl | j && j -1 --edit"
-
 alias v=vagrant
 
 # because i have a homebrew vim installation (to use blowfish2)
 alias vi=vim
+
+alias upload-gauss-wiki="scpr ~/Downloads/tiddlywiki.html root@web1:/home/gauss-wiki/html/index.html && rm ~/Downloads/tiddlywiki.html"
 
 if [ -f ~/.bash_aliases_local ]; then
 	. ~/.bash_aliases_local
