@@ -35,3 +35,5 @@ alias upload-gauss-wiki="scpr ~/Downloads/tiddlywiki.html root@web1:/home/gauss-
 if [ -f ~/.bash_aliases_local ]; then
 	. ~/.bash_aliases_local
 fi
+
+alias p3="source ~/python-3-envs/ansible/bin/activate"
