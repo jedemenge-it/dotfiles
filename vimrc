@@ -1,9 +1,9 @@
 call pathogen#infect()
 
-"Enable filetypes  
-filetype on  
-filetype plugin on  
-filetype indent on  
+"Enable filetypes
+filetype on
+filetype plugin on
+filetype indent on
 syntax on
 
 let g:html_indent_inctags = ""
@@ -13,7 +13,6 @@ let g:html_indent_inctags = ""
 " Damit der rechte scrollbalken im Vollbildmodus nicht stoert
 set guioptions-=r
 
-
 set nocompatible
 set encoding=utf-8
 set ruler
@@ -21,43 +20,43 @@ set showcmd
 set number
 set nowrap
 
+"zeige suchergebnisse farbig an
+set hlsearch
+"zeigt trailing whitespace besonders an
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+map <leader>w /\s\+$<CR>
+
 "verschluesselung mit blowfish2
-set cryptmethod=blowfish
+set cryptmethod=blowfish2
 
 set directory=~/.vim/tmp/
 
-
 "Zeigt die Statuszeile immer an
 set laststatus=2
-"Auto-completion menu 
+"Auto-completion menu
 set wildmenu
 set wildmode=list:longest
 
-
-"Hide mouse when typing  
-set mousehide 
-
+"Hide mouse when typing
+set mousehide
 
 "Tabweite
 set tabstop=4
 set shiftwidth=4
 
-"Einrückung  
-set smartindent  
-set autoindent 
-
+"Einrückung
+set smartindent
+set autoindent
 
 "Blendet die Toolbar aus
-set go-=T  
-
+set go-=T
 
 "fuer caseinsensitive suche
 set ignorecase
 
-
 "Ändert den Zen Coding expand Befehl zu Ctrl+e
 let g:user_zen_expandabbr_key = '<C-e>'
-
 
 "Für tComment Kommentarfunktion (//)
 map // <c-_><c-_>
@@ -76,13 +75,13 @@ set splitright
 
 " Speichert den aktuellen Buffer wenn VIM den focus verliert
 au FocusLost * :wa
-"Switch between buffers without saving  
-set hidden  
+"Switch between buffers without saving
+set hidden
 
 
 if has('gui_running')
 	colorscheme solarized
-    set background=light 
+    set background=light
 endif
 
 set guifont=Monospace\ 9
@@ -102,16 +101,3 @@ set completeopt=longest,menuone
 
 " Tabwechsel rückwärts auf gr gemapped
 map gr gT
-
-
-" IntelliSense
-inoremap <C-Space> <C-X><C-O>
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-
-set cm=blowfish2
