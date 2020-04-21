@@ -7,6 +7,8 @@ Hinweise
 ToDo's
 ------
 
+- improve all
+- check for zombie stuff
 - buildscript
   - backup current dotfiles at .backup_dotfiles
   - symlink all dotfiles
